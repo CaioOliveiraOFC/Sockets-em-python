@@ -1,8 +1,10 @@
 # Sockets-em-python
-Um leve demonstração de sockets em python com TCP e UDP
+Um leve demonstração de sockets em python com TCP
 
-Requisitos Python 3.9 c/ módulos socket e time instalados
-
+Requisitos:
+  Python 3.9 com os módulos socket e time instalados
+  Saber os princípios básicos de Sockets e arquitetura Cliente-Servidor
+  
 1) Baixe os dois arquivos...
 2) Execute o TCPServer.py primeiro
 3) Execute o TCPClient.py e siga as instruções
