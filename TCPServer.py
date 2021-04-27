@@ -12,18 +12,19 @@ print('Criando o socket que utilizarei para essa aplicação...')
 serverSocket = socket(AF_INET, SOCK_STREAM)
 sleep(10)
 
-#Atribuir um IP e uma porta ao socket '' significa que o kernel vai atribuir o IP para nós*
+#Atribuir um IP e uma porta ao socket '' significa que o kernel vai atribuir o IP para nós (Vai utilizar o IP local se testar na mesma máquina) 
 print('Amarrando o meu endereço de IP e a porta para o socket que acabei de criar...')
 serverSocket.bind(('', serverPort))
 sleep(10)
 
-print('Estou pronto e esperando a conexões...')
-#O servidor está esperando pela conexão , esse .listen(1) escuta e 'é o numero máximo de conexões em fila'
+print('Estou pronto e esperando conexões...')
+print('Já pode abrir o arquivo TCPClient.py')
+# O servidor está esperando pela conexão, esse .listen(1) escuta e 1 é o numero máximo de conexões em fila'
 serverSocket.listen(1)
 
 #Após a escuta ele vai entrar num loop infinito, há maneiras de interromper esse lopp, mas nesse caso eu vou deixar infinito.
 while True:
-    # OBS: TEMOS UMA PARTICULARIDADE AQUI, NOSSO SOCKET serverSocket É APENAS UMA ENTRADA PARA A CONEXÃO, ELE QUE FAZ O HANDSHAKE
+    # OBS: TEMOS UMA PARTICULARIDADE AQUI (TCP), NOSSO SOCKET serverSocket É APENAS UMA ENTRADA PARA A CONEXÃO, ELE QUE FAZ O HANDSHAKE;
     # connectionSocket e addr vão herdar os parâmetros que o método .accept() passar para eles respectivamente (ler a documentação)
     # Quando o cliente bate na porta '.listen()' ele passa direto para esse looping que cria uma conexão somente para o cliente que está tentando conectar, é assim que conseguimos várias conexões no servidor TCP.
     connectionSocket, addr = serverSocket.accept()
