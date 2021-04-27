@@ -2,8 +2,8 @@
 Um leve demonstração de sockets em python com TCP
 
 Requisitos:
-  Python 3.9 com os módulos socket e time instalados
-  Saber os princípios básicos de Sockets e arquitetura Cliente-Servidor
+ * Python 3.9 com os módulos socket e time instalados
+ * Saber os princípios básicos de Sockets e arquitetura Cliente-Servidor
   
 1) Baixe os dois arquivos...
 2) Execute o TCPServer.py primeiro
